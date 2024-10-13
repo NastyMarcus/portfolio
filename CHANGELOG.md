@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+## [2024.10.13]
+
+### Added
+
+- Designed kernel and enhanced interfaces for Playlist component.
+
+### Updated
+
+- Updated the Playlist.java to implement PlaylistEnhanced interface.
+
 ## [2024.10.3]
 
 ### Added

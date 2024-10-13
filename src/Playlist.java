@@ -16,29 +16,30 @@ class Song {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public String getArtist() {
-        return artist;
+        return this.artist;
     }
 
     public int getDuration() {
-        return duration;
+        return this.duration;
     }
 
     public void play() {
-        System.out.println("Playing: " + title + " by " + artist);
+        System.out.println("Playing: " + this.title + " by " + this.artist);
     }
 
     @Override
     public String toString() {
-        return title + " by " + artist + " (" + duration + " seconds)";
+        return this.title + " by " + this.artist + " (" + this.duration
+                + " seconds)";
     }
 }
 
 // A class representing a Playlist
-class Playlist {
+public class Playlist implements PlaylistEnhanced {
     private String name;
     private ArrayList<Song> songs;
 
@@ -49,75 +50,79 @@ class Playlist {
 
     // Kernel Methods
 
-    // Adds a song to the playlist
+    @Override
     public void addSong(Song s) {
-        songs.add(s);
+        this.songs.add(s);
         System.out.println(s.getTitle() + " has been added to the playlist.");
     }
 
-    // Removes a song from the playlist
-    public void removeSong(Song s) {
-        if (songs.remove(s)) {
-            System.out.println(s.getTitle() + " has been removed from the playlist.");
+    @Override
+    public boolean removeSong(Song s) {
+        if (this.songs.remove(s)) {
+            System.out.println(
+                    s.getTitle() + " has been removed from the playlist.");
+            return true;
         } else {
             System.out.println(s.getTitle() + " not found in the playlist.");
+            return false;
         }
     }
 
-    // Checks if the song is in the playlist
+    @Override
     public boolean containsSong(Song s) {
-        return songs.contains(s);
+        return this.songs.contains(s);
     }
 
-    // Returns the total duration of the playlist in seconds
+    @Override
     public int totalDuration() {
         int totalDurationSeconds = 0;
-        for (Song song : songs) {
+        for (Song song : this.songs) {
             totalDurationSeconds += song.getDuration();
         }
         return totalDurationSeconds;
     }
 
+    @Override
+    public void playAll() {
+        for (Song song : this.songs) {
+            song.play();
+        }
+    }
+
     // Secondary Methods
 
-    // Sorts the playlist by song title in alphabetical order
+    @Override
     public void sortByTitle() {
-        Collections.sort(songs, Comparator.comparing(Song::getTitle));
+        Collections.sort(this.songs, Comparator.comparing(Song::getTitle));
         System.out.println("Playlist sorted by title.");
     }
 
-    // Sorts the playlist by artist name
+    @Override
     public void sortByArtist() {
-        Collections.sort(songs, Comparator.comparing(Song::getArtist));
+        Collections.sort(this.songs, Comparator.comparing(Song::getArtist));
         System.out.println("Playlist sorted by artist.");
     }
 
-    // Randomly rearranges the order of songs in the playlist
+    @Override
     public void shuffle() {
-        Collections.shuffle(songs, new Random());
+        Collections.shuffle(this.songs, new Random());
         System.out.println("Playlist shuffled.");
     }
 
-    // Plays the playlist in a loop for a specified number of times
+    @Override
     public void loop(int times) {
         System.out.println("Playing playlist in a loop " + times + " times:");
         for (int i = 0; i < times; i++) {
             System.out.println("Loop " + (i + 1) + ":");
-            playAll();
-        }
-    }
-
-    // Plays all songs in the playlist
-    public void playAll() {
-        for (Song song : songs) {
-            song.play();
+            this.playAll();
         }
     }
 
     @Override
     public String toString() {
-        StringBuilder playlistDetails = new StringBuilder("Playlist: " + name + "\n");
-        for (Song song : songs) {
+        StringBuilder playlistDetails = new StringBuilder(
+                "Playlist: " + this.name + "\n");
+        for (Song song : this.songs) {
             playlistDetails.append(song).append("\n");
         }
         return playlistDetails.toString();
@@ -146,8 +151,10 @@ public class Main {
         System.out.println(myPlaylist);
 
         // Demonstrating kernel methods
-        System.out.println("Contains 'Shape of You': " + myPlaylist.containsSong(song1));
-        System.out.println("Total duration: " + myPlaylist.totalDuration() + " minutes");
+        System.out.println(
+                "Contains 'Shape of You': " + myPlaylist.containsSong(song1));
+        System.out.println(
+                "Total duration: " + myPlaylist.totalDuration() + " minutes");
 
         // Demonstrating secondary methods
         myPlaylist.sortByTitle();
