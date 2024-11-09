@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
+
 // A class representing a Song
 class Song {
     private String title;
     private String artist;
-    private int duration; // in seconds
+    private int duration;
 
     public Song(String title, String artist, int duration) {
         this.title = title;
@@ -33,11 +36,44 @@ class Song {
     }
 }
 
-// A class representing a Playlist
+// Concrete implementation of the Playlist class
 public class Playlist extends PlaylistSecondary {
 
-    public Playlist(String name) {
-        super(name);
+    private List<Song> songs;
+
+    public Playlist() {
+        this.songs = new ArrayList<>();
     }
 
+    @Override
+    public void addSong(Song s) {
+        this.songs.add(s);
+    }
+
+    @Override
+    public boolean removeSong(Song s) {
+        return this.songs.remove(s);
+    }
+
+    @Override
+    public boolean containsSong(Song s) {
+        return this.songs.contains(s);
+    }
+
+    @Override
+    public int totalDuration() {
+        return this.songs.stream().mapToInt(Song::getDuration).sum();
+    }
+
+    @Override
+    public void playAll() {
+        for (Song song : this.songs) {
+            song.play();
+        }
+    }
+
+    @Override
+    protected List<Song> getSongs() {
+        return this.songs;
+    }
 }
