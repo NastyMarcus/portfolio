@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+## [2024.11.14]
+
+### Added
+
+- Designed test suite for Playlist component
+- Designed two different use cases for Playlist component
+
+## [2024.11.9]
+
+### Added
+
+- Designed kernel implementation for Playlist component
+
 ## [2024.10.27]
 
 ### Added

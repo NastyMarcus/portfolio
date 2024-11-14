@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Marcus Shen
+- **Dot Number**: shen.1780
+- **Due Date**: 12/4 @ 11:59 PM EST
 
 ## Assignment Overview
 
@@ -49,8 +49,6 @@ Many of these additional techniques are somewhat out of the scope of this
 course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -131,8 +129,6 @@ merges, you will need to pull the changes from main into your current branch
 to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -298,18 +294,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+Completing this portfolio project has improved my understanding of software development, especially in the context of designing, testing, and iterating on a component like the Playlist class. Working through this project allowed me to engage with a software lifecycle similar to what is seen in real-world development.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+This project highlighted certain gaps in my knowledge, particularly around unit testing and handling abstract classes and interfaces effectively in Java. To address these gaps, I reviewed additional resources on JUnit and spent extra time testing my understanding with small example projects.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+My perspective on software development has broadened, and I still enjoy it. The project reinforced that development is not only about coding but also about planning, testing, and re-evaluating design decisions. I realized that I enjoy the problem-solving aspect of software development, particularly in how a single problem can have multiple solutions, each with its own trade-offs.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -317,29 +313,29 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+Designing software components with interfaces and abstract classes. Implementing modular design to separate core and extended functionality.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Developed a reusable software component with core and enhanced functionality.
+- Designed and implemented unit tests to verify component correctness.
+- Applied modular and object-oriented design principles in Java.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+This project made me more interested in backend and software component development. I enjoyed designing a system with clear interfaces and building its extended functionalities.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+Study advanced software design patterns and architectural principles. I would also consider reaching out to mentors in the field of backend development or software architecture, including professors and industry professionals on LinkedIn.
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -364,7 +360,6 @@ the following form: YYYY.0M.0D.
 ### Updated
 
 - Changed design to include ...
-
 ```
 
 Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
@@ -374,8 +369,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -426,8 +419,6 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9
