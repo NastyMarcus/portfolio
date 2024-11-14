@@ -1,5 +1,8 @@
 // Main class demonstrating the Playlist
-public class Main {
+
+import components.playlist.Playlist;
+
+public class PlaylistDemo {
     public static void main(String[] args) {
         // Creating a new playlist
         Playlist myPlaylist = new Playlist("My Favorite Songs");
